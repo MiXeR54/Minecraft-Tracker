@@ -22,7 +22,7 @@ var dbOptioms = {
 app.listen(port, () => console.log(`App listening on port ${port}!`))
 
 app.get('/', function (req, res) {
-  MongoClient.connect('mongodb+srv://server:123456)@timetracker-n8llr.mongodb.net/test?retryWrites=true&w=majority', dbOptioms, function (err, client) {
+  MongoClient.connect('mongodb+srv://server:<password>@timetracker-n8llr.mongodb.net/test?retryWrites=true&w=majority', dbOptioms, function (err, client) {
     if (err) throw err
     var db = client.db('spigot')
     db.collection('users').find().toArray(function (err, result) {
