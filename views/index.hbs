@@ -1,0 +1,19 @@
+<h1 class="text-center mt-5" >Minecraft Time Tracker</h1>
+<table class="table table-bordered table-striped mt-5">
+  <thead>
+    <tr>
+      {{!-- <th scope="col">#</th> --}}
+      <th class="text-center" scope="col">Nick</th>
+      <th class="text-center" scope="col">Played Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each result}}
+    <tr>
+      {{!-- <th scope="row">1</th> --}}
+      <td class="text-center">{{ this.name }}</td>
+      <td class="text-center">{{ this.Duration }} sec</td>
+      {{/each}}
+    </tr>
+  </tbody>
+</table>
